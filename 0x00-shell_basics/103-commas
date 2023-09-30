@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -m | find  -type d -name '*/' | sort -V
+ls -a -m | grep '*/$' | sort -V
