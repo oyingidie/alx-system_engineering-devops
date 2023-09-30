@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -m | sort -V
+ls -ma | sort i-V
