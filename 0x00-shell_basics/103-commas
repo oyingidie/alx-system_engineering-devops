@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a -m | grep "^d" | sed 's/$/\/' | sort -V
+ls -a -m | sort -V | grep "^d" | sed 's/$/\/' 
