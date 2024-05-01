@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# configure a running server to listen on port 80
+# Configure a running server to listen on port 80
 
 new="80 default_server"
 old="8080 default_server"
