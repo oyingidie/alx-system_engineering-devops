@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # configure a running server to listen on port 80
 
-new="80 default_server"
-old="8080 default_server"
-sed -i s/"$old"/"$new"/ /etc/nginx/sites-enabled/default
-service nginx restart
+old_port="8080 default_server"
+new_port="80 default_server"
+sed -i "s/$old_port/$new_port/g" /etc/nginx/sites-enabled/default
+systemctl restart nginx
