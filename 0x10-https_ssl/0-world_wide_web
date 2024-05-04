@@ -11,7 +11,7 @@ show_info ()
 if [ "$#" -eq 2 ]; then
 	show_info "$1" "$2"
 elif [ "$#" -eq 1 ]; then
-	show_info "$1" www
+	show_info "$1" wwww
 	show_info "$1" lb-01
 	show_info "$1" web-01
 	show_info "$1" web-02
