@@ -9,10 +9,10 @@ show_info ()
 	echo "The subdomain $2 is a $record record and points to $point"
 }
 if [ "$#" -eq 2 ]; then
-	show_info "$1" "$2"
+	show_info "$2.$1" "$2"
 elif [ "$#" -eq 1 ]; then
-	show_info "$1" "www"
-	show_info "$1" "lb-01"
-	show_info "$1" "web-01"
-	show_info "$1" "web-02"
+	show_info "www.$1" "www"
+	show_info "lb-01.$1" "lb-01"
+	show_info "web-01.$1" "web-01"
+	show_info "web-02.$1" "web-02"
 fi
