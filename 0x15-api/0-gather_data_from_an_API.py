@@ -7,24 +7,24 @@ import sys
 
 if __name__ == "__main__":
 
-    user_id = sys.argv[1]
+    userId = sys.argv[1]
     api = "https://jsonplaceholder.typicode.com"
-    user = requests.get(api+'/users/'+user_id)
+    user = requests.get(api+'/users/'+userId)
 
-    employee_name = user.json().get('name')
+    employeeName = user.json().get('name')
 
     todos = requests.get(api+'/todos')
-    total_tasks = 0
+    allTasks = 0
     completed = 0
 
     for task in todos.json():
-        if task.get('userId') == int(user_id):
-            total_tasks += 1
+        if task.get('userId') == int(userId):
+            allTasks += 1
             if task.get('completed'):
                 completed += 1
 
     print('Employee {} is done with tasks({}/{}):'
-          .format(employee_name, completed, total_tasks))
+          .format(employee_name, completed, allTasks))
 
     print('\n'.join(["\t " + task.get('title') for task in todos.json()
-          if task.get('userId') == int(user_id) and task.get('completed')]))
+          if task.get('userId') == int(userId) and task.get('completed')]))
