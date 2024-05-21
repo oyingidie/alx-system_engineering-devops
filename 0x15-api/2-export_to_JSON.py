@@ -18,9 +18,9 @@ if __name__ == "__main__":
 
     for task in todos:
         if task.get('userId') == int(userId):
-            taskDic = {"task": task.get('title'),
-                       "completed": task.get('completed'),
-                       "username": user.json().get('username')}
+            taskDic = {'task': task.get('title'),
+                       'completed': task.get('completed'),
+                       'username': user.json().get('username')}
             taskList.append(taskDic)
     todoUser[userId] = taskList
 
