@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a script that exports data in CSV format"""
+"""a script to export extracted data in CSV format"""
 
 if __name__ == "__main__":
     import requests
