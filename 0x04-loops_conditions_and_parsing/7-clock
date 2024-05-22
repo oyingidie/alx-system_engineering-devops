@@ -11,5 +11,5 @@ do
 		echo $m
 		((m++))
 	done
-	((m++))
+	((h++))
 done
