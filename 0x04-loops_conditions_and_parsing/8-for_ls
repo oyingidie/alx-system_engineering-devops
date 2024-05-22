@@ -1,0 +1,8 @@
+#!/usr/bin/bash env
+# displays content of current directory in list format using the for loop
+# only characters after the first dash is listed 
+
+for i in *
+do
+	echo "$i" | cut -d'-' -f2
+done
