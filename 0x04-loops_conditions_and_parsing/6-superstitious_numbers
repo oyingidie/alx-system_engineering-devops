@@ -2,8 +2,8 @@
 # displays numbers from 1 to 20 using the while loop and the case statement
 # appends strings after the 4th, 9th, and 17th iteration
 
-i=0
-while [ $i -lt 20 ]
+i=1
+while [ $i -lt 21 ]
 do
 	case $i in
 		4)
