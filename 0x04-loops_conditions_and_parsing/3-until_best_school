@@ -2,7 +2,7 @@
 # displays a string 10 times using the until loop
 
 i=10
-until ((i = 1))
+until [ $i -lt 1 ]
 do
 	echo "Best School"
 	((i--))
