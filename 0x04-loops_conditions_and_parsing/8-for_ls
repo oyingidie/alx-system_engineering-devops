@@ -1,4 +1,4 @@
-#!/usr/bin/bash env
+#!/usr/bin/env bash
 # displays content of current directory in list format using the for loop
 # only characters after the first dash is listed 
 
