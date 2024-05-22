@@ -13,7 +13,7 @@ then
 	then
 		echo "school file is not empty"
 	else
-		echo"school file is empty"
+		echo "school file is empty"
 	fi
 else
 	echo "school file does not exist"
