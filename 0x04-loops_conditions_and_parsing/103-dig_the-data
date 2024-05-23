@@ -2,4 +2,4 @@
 # displays data of visitors grouped by IP and HTTP status code
 # list in descending order of the number of occurences
 
-awk '{print $1,$9}' apache-access.log | uniq -c | sort -nr
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
