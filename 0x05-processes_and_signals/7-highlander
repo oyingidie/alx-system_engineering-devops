@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# displays a string indefinitely with a 2-second delay between each iteration
+# a different string when receiving a `SIGTERM` signal
+
+while :
+do
+	echo "To infinity and beyond"
+	trap 'echo "I am invincible!!!"' 15
+done
