@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # displays a list of currently running processes for all users
+# include users without terminal type
 
 ps -auxf
