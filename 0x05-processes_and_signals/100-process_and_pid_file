@@ -6,23 +6,23 @@ file="/var/run/myscript.pid"
 sudo touch $file
 echo $$ > $file
 
-fx_quit()
-{
-	sudo rm $file
-	exit 0
-}
-
-fx_kill()
+fn_sigterm()
 {
 	echo "I hate the kill command"
 	sudo rm $file
 	exit 0
 }
 
+fn_sigquit()
+{
+        sudo rm $file
+        exit 0
+}
+
 while :
 do
 	echo "To infinity and beyond"
-	trap fx_kill 15
+	trap fn_sigterm 15
 	trap 'echo "Y U no love me?!"' 2
-	trap fx_quit 3
+	trap fn_sigquit 3
 done
