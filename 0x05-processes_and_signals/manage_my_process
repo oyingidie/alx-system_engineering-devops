@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# indefinitely writes a string to a file with a 2-second pause between every iteration
+
+file="/tmp/my_process"
+touch $file
+
+while :
+do
+	echo "I am alive!" >> $file
+	sleep 2
+done
