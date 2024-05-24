@@ -3,19 +3,19 @@
 # displays a string indefinitely until any of three signals is received
 
 file="/var/run/myscript.pid"
-sudo touch $file
+touch $file
 echo $$ > $file
 
 fn_sigterm()
 {
 	echo "I hate the kill command"
-	sudo rm $file
+	rm $file
 	exit 0
 }
 
 fn_sigquit()
 {
-        sudo rm $file
+        rm $file
         exit 0
 }
 
