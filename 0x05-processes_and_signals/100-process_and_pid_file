@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# creates a file containing its PID
+# displays a string indefinitely until any of three signals is received
+
+file="/var/run/myscript.pid"
+sudo touch $file
+echo $$ > $file
+
+fx_quit()
+{
+	sudo rm $file
+	exit 0
+}
+
+fx_kill()
+{
+	echo "I hate the kill command"
+	sudo rm $file
+	exit 0
+}
+
+while :
+do
+	echo "To infinity and beyond"
+	trap fx_kill 15
+	trap 'echo "Y U no love me?!"' 2
+	trap fx_quit 3
+done
