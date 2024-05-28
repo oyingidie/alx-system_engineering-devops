@@ -41,7 +41,7 @@ then
 	fn_stop
 elif [[ $1 == "restart" ]]
 then
-	fn_restrt
+	fn_restart
 else
 	fn_else
 fi
